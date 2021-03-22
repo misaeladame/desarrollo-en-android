@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayoutRaiz"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_200"
+            android:orientation="vertical"
+            android:paddingStart="50dp"
+            android:paddingTop="25dp"
+            android:paddingEnd="50dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cuadros de Dialogo"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_error"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="btnToastCortoClick"
+                android:text="Toast de duracion corta" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="btnToastLargoClick"
+                android:text="Toast duracion larga" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="btnSnackClick"
+                android:text="Snack" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="btnDialogoBasicoClick"
+                android:text="Cuadro de dialogo basico" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="btnDialogoBasicoOKClick"
+                android:text="Dialogo basico con boton ok" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="btnDialogoBasicoOKCANCELClick"
+                android:text="Dialogo basico con botones OK y Cancel" />
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="btnDialogoListaBasicaClick"
+                android:text="Dialogo con lista de opciones basica" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="btnDialogoListaSeleccionUnicaClick"
+                android:text="Dialogo con botones de radio seleccion unica" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="btnDialogoListaSeleccionMultipleClick"
+                android:text="Dialogo con casillas de verificacion seleccion multiple" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="btnDialogoLayoutIncrustadoClick"
+                android:text="Dialogo con Layout incrustado" />
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="btnAcercaDeClick"
+                android:text="Acerca de" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
