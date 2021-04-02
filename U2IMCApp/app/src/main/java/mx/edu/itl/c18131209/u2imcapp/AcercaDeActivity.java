@@ -6,14 +6,14 @@
 :*
 :*                   SEMESTRE: ENE-JUN/2021    HORA: 10-11 HRS
 :*
-:*                       Clase que despliega la bandera de Mexico
+:*                                 Clase sobre el autor
 :*
-:*  Archivo     : BanderaCompletaActivity.java
+:*  Archivo     : AcercaDeActivity.java
 :*  Autor       : Jose Misael Adame Sandoval     18131209
-:*  Fecha       : 23/Mar/2021
+:*  Fecha       : 25/Mar/2021
 :*  Compilador  : Android Studio 4.1.2
-:*  Descripción : Clase que muestra la bandera completa de México en un solo
-:*                activity y un layout.
+:*  Descripción : Clase que muestra información relevante como nombre completo del
+:*                alumno, escuela y carrera.
 :*
 :*  Ultima modif:
 :*  Fecha       Modificó             Motivo
@@ -21,20 +21,21 @@
 :*
 :*------------------------------------------------------------------------------------------*/
 
-package mx.edu.itl.c18131209.u2banderitaapp;
-
-import androidx.appcompat.app.AppCompatActivity;
+package mx.edu.itl.c18131209.u2imcapp;
 
 import android.os.Bundle;
 
-public class BanderaCompletaActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class AcercaDeActivity extends AppCompatActivity {
 
     //----------------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bandera_completa);
+        setContentView ( R.layout.activity_acerca_de );
     }
 
     //----------------------------------------------------------------------------------------------

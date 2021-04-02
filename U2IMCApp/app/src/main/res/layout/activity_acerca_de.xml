@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:orientation="vertical"
     android:padding="10dp"
     android:textAlignment="center"
@@ -83,14 +84,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Semestre : Ene-Jun/2021" />
+            android:text="Semestre : Ene-Jun/2021"
+            android:textColor="#201F1F" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Grupo: 10 a 11 AM" />
+            android:text="Grupo: 10 a 11 AM"
+            android:textColor="#201F1F" />
     </LinearLayout>
 
     <LinearLayout
@@ -105,7 +108,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="BanderitaApp"
+            android:text="IMCApp"
             android:textAlignment="center"
             android:textColor="@color/design_default_color_primary_dark"
             android:textSize="30sp"
@@ -144,10 +147,9 @@
             android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#FFFFFF"
-            android:text="Torreon, Coah. a 17 de Marzo de 2021"
+            android:text="Torreon, Coah. a 26 de Marzo de 2021"
             android:textAlignment="center"
-            android:textColor="#636363"
+            android:textColor="#201F1F"
             android:textSize="10sp" />
     </LinearLayout>
 </LinearLayout>
