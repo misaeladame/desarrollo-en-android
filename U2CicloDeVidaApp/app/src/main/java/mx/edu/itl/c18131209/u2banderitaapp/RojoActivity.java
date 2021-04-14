@@ -18,7 +18,7 @@
 :*  Ultima modif:
 :*  Fecha       Modificó             Motivo
 :*==========================================================================================
-:*
+:*  13/Abr/2021 Misael Adame         Se agregaron métodos del Activity Lifecicle
 :*------------------------------------------------------------------------------------------*/
 
 package mx.edu.itl.c18131209.u2banderitaapp;
@@ -27,6 +27,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class RojoActivity extends AppCompatActivity {
 
@@ -36,6 +37,7 @@ public class RojoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView ( R.layout.activity_rojo );
+        Toast.makeText( this, "Rojo: onCreate", Toast.LENGTH_SHORT ).show ();
     }
 
     //----------------------------------------------------------------------------------------------
@@ -49,4 +51,51 @@ public class RojoActivity extends AppCompatActivity {
 
     //----------------------------------------------------------------------------------------------
 
+    @Override
+    public void onStart () {
+        super.onStart ();
+        Toast.makeText( this, "Rojo: onStart", Toast.LENGTH_SHORT ).show ();
+    }
+
+    //----------------------------------------------------------------------------------------------
+
+    @Override
+    public void onResume () {
+        super.onResume ();
+        Toast.makeText( this, "Rojo: onResume", Toast.LENGTH_SHORT ).show ();
+    }
+
+    //----------------------------------------------------------------------------------------------
+
+    @Override
+    public void onPause () {
+        super.onPause ();
+        Toast.makeText( this, "Rojo: onPause", Toast.LENGTH_SHORT ).show ();
+    }
+
+    //----------------------------------------------------------------------------------------------
+
+    @Override
+    public void onStop () {
+        super.onStop ();
+        Toast.makeText( this, "Rojo: onStop", Toast.LENGTH_SHORT ).show ();
+    }
+
+    //----------------------------------------------------------------------------------------------
+
+    @Override
+    public void onDestroy () {
+        super.onDestroy ();
+        Toast.makeText( this, "Rojo: onDestroy", Toast.LENGTH_SHORT ).show ();
+    }
+
+    //----------------------------------------------------------------------------------------------
+
+    @Override
+    public void onRestart () {
+        super.onRestart ();
+        Toast.makeText( this, "Rojo: onRestart", Toast.LENGTH_SHORT ).show ();
+    }
+
+    //----------------------------------------------------------------------------------------------
 }

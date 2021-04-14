@@ -18,7 +18,7 @@
 :*  Ultima modif:
 :*  Fecha       Modificó             Motivo
 :*==========================================================================================
-:*
+:*  13/Abr/2021 Misael Adame         Se agregaron métodos del Activity Lifecicle
 :*------------------------------------------------------------------------------------------*/
 
 package mx.edu.itl.c18131209.u2banderitaapp;
@@ -28,6 +28,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class BlancoActivity extends AppCompatActivity {
 
@@ -37,6 +38,7 @@ public class BlancoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView ( R.layout.activity_blanco );
+        Toast.makeText( this, "Blanco: onCreate", Toast.LENGTH_SHORT ).show ();
     }
 
     //----------------------------------------------------------------------------------------------
@@ -54,4 +56,51 @@ public class BlancoActivity extends AppCompatActivity {
 
     //----------------------------------------------------------------------------------------------
 
+    @Override
+    public void onStart () {
+        super.onStart ();
+        Toast.makeText( this, "Blanco: onStart", Toast.LENGTH_SHORT ).show ();
+    }
+
+    //----------------------------------------------------------------------------------------------
+
+    @Override
+    public void onResume () {
+        super.onResume ();
+        Toast.makeText( this, "Blanco: onResume", Toast.LENGTH_SHORT ).show ();
+    }
+
+    //----------------------------------------------------------------------------------------------
+
+    @Override
+    public void onPause () {
+        super.onPause ();
+        Toast.makeText( this, "Blanco: onPause", Toast.LENGTH_SHORT ).show ();
+    }
+
+    //----------------------------------------------------------------------------------------------
+
+    @Override
+    public void onStop () {
+        super.onStop ();
+        Toast.makeText( this, "Blanco: onStop", Toast.LENGTH_SHORT ).show ();
+    }
+
+    //----------------------------------------------------------------------------------------------
+
+    @Override
+    public void onDestroy () {
+        super.onDestroy ();
+        Toast.makeText( this, "Blanco: onDestroy", Toast.LENGTH_SHORT ).show ();
+    }
+
+    //----------------------------------------------------------------------------------------------
+
+    @Override
+    public void onRestart () {
+        super.onRestart ();
+        Toast.makeText( this, "Blanco: onRestart", Toast.LENGTH_SHORT ).show ();
+    }
+
+    //----------------------------------------------------------------------------------------------
 }
