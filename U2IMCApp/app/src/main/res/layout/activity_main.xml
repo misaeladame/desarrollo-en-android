@@ -18,7 +18,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Indice de Masa Corporal (IMC)"
+            android:text="@string/txt_titulo_main"
             android:textAlignment="center"
             android:textColor="@color/purple_700"
             android:textSize="18sp"
@@ -42,7 +42,7 @@
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Peso (kg)"
+                    android:text="@string/txt_peso"
                     android:textColor="#201F1F" />
 
                 <EditText
@@ -63,7 +63,7 @@
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Estatura (m)"
+                    android:text="@string/txt_estatura"
                     android:textColor="#201F1F" />
 
                 <EditText
@@ -83,13 +83,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="btnCalcularIMCClick"
-            android:text="Calcular IMC" />
+            android:text="@string/btn_calcular" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="btnAcercaDeClick"
-            android:text="Acerca De..." />
+            android:text="@string/btn_acerca_de" />
     </LinearLayout>
 </LinearLayout>

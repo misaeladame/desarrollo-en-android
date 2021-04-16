@@ -52,41 +52,50 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Obtenemos las referencias a los editText de la interfaz de usuario
-        edtPeso = findViewById( R.id.edtPeso );
-        edtEstatura = findViewById( R.id.edtEstatura );
+        edtPeso = findViewById(R.id.edtPeso);
+        edtEstatura = findViewById(R.id.edtEstatura);
+
+        // Establecer la referencia del contexto de este Activity en la clase RR
+        RR.contexto = this;
+
     }
 
     //----------------------------------------------------------------------------------------------
 
-    public void btnCalcularIMCClick ( View v ) {
-
-        if ( edtPeso.getText().toString().isEmpty() || edtEstatura.getText().toString().isEmpty() ) {
+    public void btnCalcularIMCClick(View v) {
+        if (edtPeso.getText().toString().isEmpty() || edtEstatura.getText().toString().isEmpty()) {
             mostrarMensajeError ();
         } else {
-            float peso = Float.parseFloat ( edtPeso.getText ().toString () );
-            float estatura = Float.parseFloat ( edtEstatura.getText ().toString () );
-            float imc = 0;
-
-            imc = (float) ( peso / Math.pow ( estatura, 2) );
-            if ( imc > 0 && imc < 15 )
-                mostrarMensajeCondicion ( imc, "Delgadez muy severa" );
-            else if ( imc >= 15 && imc <= 15.9 )
-                mostrarMensajeCondicion ( imc, "Delgadez Severa");
-            else if ( imc >= 16 && imc <= 18.4 )
-                mostrarMensajeCondicion ( imc, "Delgadez");
-            else if ( imc >= 18.5 && imc <= 24.9)
-                mostrarMensajeCondicion ( imc, "Peso Saludable");
-            else if ( imc >= 25 && imc <= 29.9 )
-                mostrarMensajeCondicion ( imc, "Sobrepeso");
-            else if ( imc >= 30 && imc <= 34.9 )
-                mostrarMensajeCondicion ( imc, "Obesidad Moderada");
-            else if ( imc >= 35 && imc <= 39.9 )
-                mostrarMensajeCondicion ( imc, "Obesidad severa");
-            else if ( imc >= 40 )
-                mostrarMensajeCondicion ( imc, "Obesidad muy severa (obesidad morbida)");
-            else
-                mostrarMensajeError();
+            determinarCondicion ();
         }
+    }
+
+    //----------------------------------------------------------------------------------------------
+
+    public void determinarCondicion () {
+        float peso = Float.parseFloat(edtPeso.getText().toString());
+        float estatura = Float.parseFloat(edtEstatura.getText().toString());
+        float imc = 0;
+
+        imc = (float) (peso / Math.pow(estatura, 2));
+        if (imc > 0 && imc < 15)
+            mostrarMensajeCondicion(imc, RR.s ( R.string.txt_delgadez_muy_severa ) );
+        else if (imc >= 15 && imc <= 15.9)
+            mostrarMensajeCondicion(imc, RR.s ( R.string.txt_delgadez_severa ) );
+        else if (imc >= 16 && imc <= 18.4)
+            mostrarMensajeCondicion(imc, RR.s ( R.string.txt_delgadez ) );
+        else if (imc >= 18.5 && imc <= 24.9)
+            mostrarMensajeCondicion(imc, RR.s ( R.string.txt_peso_saludable ) );
+        else if (imc >= 25 && imc <= 29.9)
+            mostrarMensajeCondicion(imc, RR.s ( R.string.txt_sobrepeso ) );
+        else if (imc >= 30 && imc <= 34.9)
+            mostrarMensajeCondicion(imc, RR.s ( R.string.txt_obesidad_moderada ) );
+        else if (imc >= 35 && imc <= 39.9)
+            mostrarMensajeCondicion(imc, RR.s ( R.string.txt_obesidad_severa ) );
+        else if (imc >= 40)
+            mostrarMensajeCondicion(imc, RR.s ( R.string.txt_obesidad_muy_severa ) );
+        else
+            mostrarMensajeError();
     }
 
     //----------------------------------------------------------------------------------------------
@@ -100,9 +109,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void mostrarMensajeCondicion ( float imc, String condicion ) {
         AlertDialog.Builder builder = new AlertDialog.Builder ( this );
-        builder.setTitle ( "IMC = " +imc )
-                .setMessage ( "Su condicion de salud es: " +condicion )
-                .setPositiveButton ( "Aceptar", new DialogInterface.OnClickListener () {
+        builder.setTitle ( RR.s ( R.string.txt_imc ) +" "  +imc )
+                .setMessage ( RR.s ( R.string.txt_su_condicion_es ) +" " +condicion )
+                .setPositiveButton ( RR.s ( R.string.txt_aceptar ) , new DialogInterface.OnClickListener () {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss ();
@@ -116,9 +125,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void mostrarMensajeError () {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Error")
-                .setMessage ( "Ingrese un numero positivo" )
-                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+        builder.setTitle( RR.s ( R.string.txt_error ) )
+                .setMessage ( RR.s ( R.string.txt_numero_positivo ) )
+                .setPositiveButton( RR.s ( R.string.txt_aceptar ), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();

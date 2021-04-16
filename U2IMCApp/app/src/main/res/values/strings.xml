@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">U2IMCApp</string>
+    <string name="txt_titulo_main">Indice de Masa Corporal (IMC)</string>
+    <string name="txt_peso">Peso (kg)</string>
+    <string name="txt_estatura">Estatura (m)</string>
+    <string name="btn_calcular">Calcular IMC</string>
+    <string name="btn_acerca_de">Acerca de...</string>
+    <string name="txt_imc">IMC =</string>
+    <string name="txt_su_condicion_es">Su condicion de salud es:</string>
+    <string name="txt_delgadez_muy_severa">Delgadez muy severa</string>
+    <string name="txt_delgadez_severa">Delgadez severa</string>
+    <string name="txt_delgadez">Delgadez</string>
+    <string name="txt_peso_saludable">Peso saludable</string>
+    <string name="txt_sobrepeso">Sobrepeso</string>
+    <string name="txt_obesidad_moderada">Obesidad moderada</string>
+    <string name="txt_obesidad_severa">Obesidad severa</string>
+    <string name="txt_obesidad_muy_severa">Obesidad muy severa</string>
+    <string name="txt_aceptar">Aceptar</string>
+    <string name="txt_error">Error</string>
+    <string name="txt_numero_positivo">Ingrese un numero positivo</string>
+    <string name="txt_semestre">Semestre : Ene-Jun/2021</string>
+    <string name="txt_grupo">Grupo: 10 a 11 AM</string>
+    <string name="txt_alumno">Alumno:</string>
+    <string name="txt_lugar_y_fecha">Torreon, Coah. a 16 de Abril de 2021</string>
+    <string name="txt_tecnm">TECNOLOGICO NACIONAL DE MEXICO</string>
+    <string name="txt_itl">Instituto Tecnologico de La Laguna</string>
+    <string name="txt_titulo_app">IMCApp</string>
+    <string name="txt_carrera">Ingeniería en Sistemas Computacionales</string>
+    <string name="txt_nombre_materia">Desarrollo en Android</string>
 </resources>

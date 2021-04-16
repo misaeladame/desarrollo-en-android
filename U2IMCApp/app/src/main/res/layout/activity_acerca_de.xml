@@ -34,7 +34,7 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TECNOLOGICO NACIONAL DE MEXICO"
+                android:text="@string/txt_tecnm"
                 android:textAlignment="center"
                 android:textColor="@color/design_default_color_primary_dark"
                 android:textStyle="bold" />
@@ -43,7 +43,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Instituto Tecnologico de La Laguna"
+                android:text="@string/txt_itl"
                 android:textAlignment="center"
                 android:textColor="@color/design_default_color_primary_dark"
                 android:textStyle="bold" />
@@ -52,7 +52,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ingeniería en Sistemas Computacionales"
+                android:text="@string/txt_carrera"
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_blue_dark"
                 android:textStyle="bold" />
@@ -61,7 +61,7 @@
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Desarrollo en Android"
+                android:text="@string/txt_nombre_materia"
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_red_dark" />
         </LinearLayout>
@@ -84,7 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Semestre : Ene-Jun/2021"
+            android:text="@string/txt_semestre"
             android:textColor="#201F1F" />
 
         <TextView
@@ -92,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Grupo: 10 a 11 AM"
+            android:text="@string/txt_grupo"
             android:textColor="#201F1F" />
     </LinearLayout>
 
@@ -108,7 +108,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="IMCApp"
+            android:text="@string/txt_titulo_app"
             android:textAlignment="center"
             android:textColor="@color/design_default_color_primary_dark"
             android:textSize="30sp"
@@ -125,7 +125,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Alumno:" />
+            android:text="@string/txt_alumno"
+            android:textColor="#201F1F" />
 
         <TextView
             android:id="@+id/textView9"
@@ -147,7 +148,7 @@
             android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Torreon, Coah. a 26 de Marzo de 2021"
+            android:text="@string/txt_lugar_y_fecha"
             android:textAlignment="center"
             android:textColor="#201F1F"
             android:textSize="10sp" />

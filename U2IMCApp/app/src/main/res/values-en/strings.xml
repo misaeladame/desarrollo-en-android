@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">U2BMIApp</string>
+    <string name="txt_titulo_main">Body Mass Index (BMI)</string>
+    <string name="txt_peso">Weight (kg)</string>
+    <string name="txt_estatura">Height (m)</string>
+    <string name="btn_calcular">Calculate BMI</string>
+    <string name="btn_acerca_de">About...</string>
+    <string name="txt_imc">"BMI = "</string>
+    <string name="txt_su_condicion_es">Your health condition is:</string>
+    <string name="txt_delgadez_muy_severa">Very severely thiness</string>
+    <string name="txt_delgadez_severa">Severely thiness</string>
+    <string name="txt_delgadez">Thiness</string>
+    <string name="txt_peso_saludable">Healthy</string>
+    <string name="txt_sobrepeso">Overweight</string>
+    <string name="txt_obesidad_moderada">Moderate overweight</string>
+    <string name="txt_obesidad_severa">Severely overweight</string>
+    <string name="txt_obesidad_muy_severa">Very severely overweight</string>
+    <string name="txt_aceptar">OK</string>
+    <string name="txt_error">Error</string>
+    <string name="txt_numero_positivo">Please enter a positive number</string>
+    <string name="txt_semestre">Semester : Jan-Jun/2021</string>
+    <string name="txt_grupo">Group: 10 to 11 AM</string>
+    <string name="txt_alumno">Student:</string>
+    <string name="txt_lugar_y_fecha">Torreon, Coah. to April 16, 2021</string>
+    <string name="txt_tecnm">TECNOLOGICO NACIONAL DE MEXICO</string>
+    <string name="txt_itl">Instituto Tecnologico de La Laguna</string>
+    <string name="txt_titulo_app">BMIApp</string>
+    <string name="txt_carrera">Computer Systems Engineering</string>
+    <string name="txt_nombre_materia">Android Development</string>
+</resources>
