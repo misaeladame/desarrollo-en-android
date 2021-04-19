@@ -22,9 +22,9 @@
     <string name="txt_semestre">Semester : Jan-Jun/2021</string>
     <string name="txt_grupo">Group: 10 to 11 AM</string>
     <string name="txt_alumno">Student:</string>
-    <string name="txt_lugar_y_fecha">Torreon, Coah. to April 16, 2021</string>
-    <string name="txt_tecnm">TECNOLOGICO NACIONAL DE MEXICO</string>
-    <string name="txt_itl">Instituto Tecnologico de La Laguna</string>
+    <string name="txt_lugar_y_fecha">Torreon, Coah. to April 19, 2021</string>
+    <string name="txt_tecnm">MEXICO NATIONAL TECHNOLOGICAL</string>
+    <string name="txt_itl">La Laguna Institute of Technology</string>
     <string name="txt_titulo_app">BMIApp</string>
     <string name="txt_carrera">Computer Systems Engineering</string>
     <string name="txt_nombre_materia">Android Development</string>
