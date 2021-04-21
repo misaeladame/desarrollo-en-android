@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="titulo">25sp</dimen>
+    <dimen name="margenes">10dp</dimen>
+    <dimen name="layoutMargen">15dp</dimen>
+    <dimen name="altoBarraColores">5dp</dimen>
+    <dimen name="botones">20dp</dimen>
+
+</resources>
