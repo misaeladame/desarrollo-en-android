@@ -31,6 +31,8 @@ import android.os.Handler;
 
 public class SplashActivity extends AppCompatActivity {
 
+    //----------------------------------------------------------------------------------------------
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,4 +48,7 @@ public class SplashActivity extends AppCompatActivity {
             }
         }, 3000 );
     }
+
+    //----------------------------------------------------------------------------------------------
+
 }

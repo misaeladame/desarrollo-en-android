@@ -24,6 +24,8 @@
 :*  Fecha       Modificó             Motivo
 :*==========================================================================================
 :*  16/Abr/2021 Misael Adame         Adaptar la aplicación al idioma inglés
+:*
+:*  23/Abr/2021 Misael Adame         Uso de los métodos de la clase Log
 :*------------------------------------------------------------------------------------------*/
 
 package mx.edu.itl.c18131209.u2imcapp;
@@ -34,6 +36,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -76,6 +79,10 @@ public class MainActivity extends AppCompatActivity {
         float peso = Float.parseFloat(edtPeso.getText().toString());
         float estatura = Float.parseFloat(edtEstatura.getText().toString());
         float imc = 0;
+
+        Log.d ("JMAS", "estatura = " +estatura );
+        Log.d ("JMAS", "peso = " +peso );
+        Log.v ("MA", "hola" );
 
         imc = (float) (peso / Math.pow(estatura, 2));
         if (imc > 0 && imc < 15)
