@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutLogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/GrisOscuro"
@@ -81,7 +82,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/edtUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/Blanco"
@@ -92,7 +93,7 @@
             android:textSize="@dimen/titulo" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/edtContrasena"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/layoutMargen"
@@ -109,6 +110,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/Azul"
+            android:onClick="btnEntrarClick"
             android:text="Entrar"
             android:textColor="@color/Blanco"
             android:textSize="@dimen/titulo" />
