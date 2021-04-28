@@ -43,4 +43,18 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
     }
+
+    public void btnUsuarioClick ( View v ) {
+        Intent intent = new Intent ( this, LeerDatoActivity.class );
+        // Establecemos el dato que se traspasara al segundo activity
+        intent.putExtra ( "usuario", edtUsuario.getText().toString() );
+        startActivity ( intent );
+    }
+
+    public void btnContrasenaClick ( View v ) {
+        Intent intent = new Intent ( this, LeerDatoActivity.class );
+        // Establecemos el dato que se traspasara al segundo activity
+        intent.putExtra ( "contrasena", edtUsuario.getText().toString() );
+        startActivity ( intent );
+    }
 }
