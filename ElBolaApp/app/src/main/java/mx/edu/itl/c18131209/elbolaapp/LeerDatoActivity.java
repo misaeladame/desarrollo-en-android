@@ -1,6 +1,7 @@
 package mx.edu.itl.c18131209.elbolaapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +11,7 @@ import android.widget.LinearLayout;
 
 public class LeerDatoActivity extends AppCompatActivity {
 
-    LinearLayout layout;
+    ConstraintLayout layout;
     private EditText edtDato;
     private String llave;
 
@@ -19,7 +20,7 @@ public class LeerDatoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leer_dato);
 
-        layout = (LinearLayout) findViewById ( R.id.layoutLogin );
+        layout = findViewById ( R.id.layoutLeerDato );
         layout.setOnClickListener ( new ClickLayoutAdaptadora (this ) );
 
         // Obtener la referencia del EditText en la IU para el dato
