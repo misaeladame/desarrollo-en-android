@@ -1,5 +1,6 @@
 package mx.edu.itl.c18131209.elbolaapp;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -56,5 +57,10 @@ public class LoginActivity extends AppCompatActivity {
         // Establecemos el dato que se traspasara al segundo activity
         intent.putExtra ( "contrasena", edtUsuario.getText().toString() );
         startActivity ( intent );
+    }
+
+    @Override
+    protected void onActivityResult ( int requestCode, int resultCode, @Nullable Intent data ) {
+        super.onActivityResult ( requestCode, resultCode, data );
     }
 }
