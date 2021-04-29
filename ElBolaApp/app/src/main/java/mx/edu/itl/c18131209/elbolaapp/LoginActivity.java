@@ -12,6 +12,10 @@ import android.widget.LinearLayout;
 public class LoginActivity extends AppCompatActivity {
 
     LinearLayout layout;
+
+    public static final int CODIGO_USUARIO = 10;
+    public static final int CODIGO_CONTRASENA = 20;
+
     private EditText edtUsuario;
     private EditText edtContrasena;
 
@@ -49,14 +53,14 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent ( this, LeerDatoActivity.class );
         // Establecemos el dato que se traspasara al segundo activity
         intent.putExtra ( "usuario", edtUsuario.getText().toString() );
-        startActivity ( intent );
+        startActivityForResult ( intent, CODIGO_USUARIO );
     }
 
     public void btnContrasenaClick ( View v ) {
         Intent intent = new Intent ( this, LeerDatoActivity.class );
         // Establecemos el dato que se traspasara al segundo activity
-        intent.putExtra ( "contrasena", edtUsuario.getText().toString() );
-        startActivity ( intent );
+        intent.putExtra ( "contrasena", edtContrasena.getText().toString() );
+        startActivityForResult ( intent, CODIGO_CONTRASENA );
     }
 
     @Override
