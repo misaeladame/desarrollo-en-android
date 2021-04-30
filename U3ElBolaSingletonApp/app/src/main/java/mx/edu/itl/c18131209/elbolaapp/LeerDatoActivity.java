@@ -27,24 +27,20 @@ public class LeerDatoActivity extends AppCompatActivity {
         edtDato = findViewById ( R.id.edtDato );
 
         // Recuperamos el valor del argumento que viene desde loginActivity
-        Intent i = getIntent ();
-        String dato = i.getStringExtra ( "usuario" );
-
-        if ( dato != null ) {
-            edtDato.setText ( dato );
-            llave = "usuario";
-        } else {
-            dato = i.getStringExtra ( "contrasena" );
-            edtDato.setText ( dato );
-            llave = "contrasena";
-        }
+        if ( MiSingleton.getInstancia().getCodigoLogin() == LoginActivity.CODIGO_USUARIO )
+            edtDato.setText ( MiSingleton.getInstancia().getUsuario() );
+        else if ( MiSingleton.getInstancia().getCodigoLogin() == LoginActivity.CODIGO_CONTRASENA )
+            edtDato.setText ( MiSingleton.getInstancia().getContrasena() );
     }
 
     public void btnAceptarClick ( View v ) {
-        // Establecemos el valor del resultado que se devolvera a LoginActivity
-        Intent intent = getIntent ();
-        intent.putExtra ( "dato_nuevo", edtDato.getText ().toString () );
-        setResult ( RESULT_OK, intent );
+        // Establecemos el valor del resultado en el Singleton que se devolvera a LoginActivity
+        if ( MiSingleton.getInstancia().getCodigoLogin() == LoginActivity.CODIGO_USUARIO )
+            MiSingleton.getInstancia ().setUsuario ( edtDato.getText ().toString () );
+        else if ( MiSingleton.getInstancia().getCodigoLogin() == LoginActivity.CODIGO_CONTRASENA )
+            MiSingleton.getInstancia ().setContrasena ( edtDato.getText ().toString () );
+
+        setResult ( RESULT_OK );
         finish ();
     }
 

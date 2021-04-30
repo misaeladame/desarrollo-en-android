@@ -51,15 +51,17 @@ public class LoginActivity extends AppCompatActivity {
 
     public void btnUsuarioClick ( View v ) {
         Intent intent = new Intent ( this, LeerDatoActivity.class );
-        // Establecemos el dato que se traspasara al segundo activity
-        intent.putExtra ( "usuario", edtUsuario.getText().toString() );
+        // Establecemos el dato que se traspasara al segundo activity en el Singleton
+        MiSingleton.getInstancia ().setUsuario ( edtUsuario.getText ().toString () );
+        MiSingleton.getInstancia ().setCodigoLogin ( CODIGO_USUARIO );
         startActivityForResult ( intent, CODIGO_USUARIO );
     }
 
     public void btnContrasenaClick ( View v ) {
         Intent intent = new Intent ( this, LeerDatoActivity.class );
-        // Establecemos el dato que se traspasara al segundo activity
-        intent.putExtra ( "contrasena", edtContrasena.getText().toString() );
+        // Establecemos el dato que se traspasara al segundo activity en el Singleton
+        MiSingleton.getInstancia ().setContrasena ( edtContrasena.getText ().toString () );
+        MiSingleton.getInstancia ().setCodigoLogin ( CODIGO_CONTRASENA );
         startActivityForResult ( intent, CODIGO_CONTRASENA );
     }
 
@@ -69,9 +71,9 @@ public class LoginActivity extends AppCompatActivity {
         // verificar el estado del resultado devuelto por LeerDatoActivity
         if ( resultCode == RESULT_OK ) {
             if ( requestCode == CODIGO_USUARIO ) {
-                edtUsuario.setText ( data.getStringExtra ( "dato_nuevo" ) );
+                edtUsuario.setText ( MiSingleton.getInstancia ().getUsuario () );
             } else if ( requestCode == CODIGO_CONTRASENA ) {
-                edtContrasena.setText ( data.getStringExtra ( "dato_nuevo" ) );
+                edtContrasena.setText (  MiSingleton.getInstancia ().getContrasena () );
             }
         } else if ( resultCode == RESULT_CANCELED ) {
             // Hacer algo si se cancela la captura del dato nuevo
