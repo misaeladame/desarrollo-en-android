@@ -2,6 +2,7 @@ package mx.edu.itl.c18131209.elbolaapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -25,10 +26,6 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         btnFiesta.setOnTouchListener ( this );
         // Establecer el canal de audio para reproducción de música
         setVolumeControlStream ( AudioManager.STREAM_MUSIC );
-
-    }
-
-    public void btnSpotifyClick ( View v ) {
 
     }
 
@@ -58,5 +55,10 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             mediaPlayer.stop ();
             mediaPlayer = null;
         }
+    }
+
+    public void btnSpotifyClick ( View v ) {
+        Intent intent = new Intent( this, ConciertoActivity.class );
+        startActivity ( intent );
     }
 }
