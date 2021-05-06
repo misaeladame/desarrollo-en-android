@@ -1,3 +1,25 @@
+/*------------------------------------------------------------------------------------------
+:*                         TECNOLOGICO NACIONAL DE MEXICO
+:*                       INSTITUTO TECNOLOGICO DE LA LAGUNA
+:*                     INGENIERIA EN SISTEMAS COMPUTACIONALES
+:*                             DESARROLLO EN ANDROID "A"
+:*
+:*                   SEMESTRE: ENE-JUN/2021    HORA: 10-11 HRS
+:*
+:*                                 Clase concierto
+:*
+:*  Archivo     : ConciertoActivity.java
+:*  Autor       : Jose Misael Adame Sandoval     18131209
+:*  Fecha       : 04/May/2021
+:*  Compilador  : Android Studio 4.1.2
+:*  Descripción : Clase que reproduce video mp4 de un concierto de una banda de rock lml
+:*
+:*  Ultima modif:
+:*  Fecha       Modificó             Motivo
+:*==========================================================================================
+:*
+:*------------------------------------------------------------------------------------------*/
+
 package mx.edu.itl.c18131209.elbolaapp;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,7 +31,11 @@ import android.widget.VideoView;
 
 public class ConciertoActivity extends AppCompatActivity {
 
+    //----------------------------------------------------------------------------------------------
+
     private VideoView videoView;
+
+    //----------------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,4 +52,7 @@ public class ConciertoActivity extends AppCompatActivity {
         videoView.requestFocus ();
         videoView.start ();
     }
+
+    //----------------------------------------------------------------------------------------------
+
 }

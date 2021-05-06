@@ -1,3 +1,35 @@
+/*------------------------------------------------------------------------------------------
+:*                         TECNOLOGICO NACIONAL DE MEXICO
+:*                       INSTITUTO TECNOLOGICO DE LA LAGUNA
+:*                     INGENIERIA EN SISTEMAS COMPUTACIONALES
+:*                             DESARROLLO EN ANDROID "A"
+:*
+:*                   SEMESTRE: ENE-JUN/2021    HORA: 10-11 HRS
+:*
+:*                                Clase GUI Principal
+:*
+:*  Archivo     : MainActivity.java
+:*  Autor       : Jose Misael Adame Sandoval     18131209
+:*  Fecha       : 02/May/2021
+:*  Compilador  : Android Studio 4.1.2
+:*  Descripción : Reproduce imagenes, audios dependiendo del boton usado.
+:*                Los botones del MainAnctivity son los siguientes:
+:*
+:*                •	Rock: Se muestra una imagen de una guitarra
+:*                •	Romance: Se muestra una imagen de un atardecer
+:*                •	Diplomado Android: Se muestra una iamgen de un equipo de sonido
+:*                •	Party: Se reproduce una canción de rock en inglés
+:*                •	Spotify: Invoca al ConciertoActivity
+:*
+:*                - Además hay un horizontalScrollView en el cual contiene distintas
+:*                  imágenes de bandas de rock.
+:*
+:*  Ultima modif:
+:*  Fecha       Modificó             Motivo
+:*==========================================================================================
+:*
+:*------------------------------------------------------------------------------------------*/
+
 package mx.edu.itl.c18131209.elbolaapp;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,8 +44,12 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnTouchListener {
 
+    //----------------------------------------------------------------------------------------------
+
     private Button btnFiesta;
     private MediaPlayer mediaPlayer = null;
+
+    //----------------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +65,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
     }
 
+    //----------------------------------------------------------------------------------------------
+
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent ) {
         if ( view.getId() == R.id.btnFiesta ) {
@@ -43,12 +81,16 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         return false;
     }
 
+    //----------------------------------------------------------------------------------------------
+
     private void reproducir_audio () {
         if ( mediaPlayer == null ) {
             mediaPlayer = MediaPlayer.create ( this, R.raw.tropicalisimo );
         }
         mediaPlayer.start ();
     }
+
+    //----------------------------------------------------------------------------------------------
 
     private void detener_audio () {
         if ( mediaPlayer != null ) {
@@ -57,8 +99,13 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         }
     }
 
+    //----------------------------------------------------------------------------------------------
+
     public void btnSpotifyClick ( View v ) {
         Intent intent = new Intent( this, ConciertoActivity.class );
         startActivity ( intent );
     }
+
+    //----------------------------------------------------------------------------------------------
+
 }
