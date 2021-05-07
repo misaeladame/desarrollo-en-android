@@ -97,6 +97,13 @@ public class LoginActivity extends AppCompatActivity {
 
     //----------------------------------------------------------------------------------------------
 
+    public void btnAcercaDeClick ( View v ) {
+        Intent intent = new Intent ( this, AcercaDeActivity.class );
+        startActivity ( intent );
+    }
+
+    //----------------------------------------------------------------------------------------------
+
     @Override
     protected void onActivityResult ( int requestCode, int resultCode, @Nullable Intent data ) {
         super.onActivityResult ( requestCode, resultCode, data );

@@ -146,6 +146,16 @@
             android:text="Entrar"
             android:textColor="@color/Negro"
             android:textSize="@dimen/titulo" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/Azul"
+            android:onClick="btnAcercaDeClick"
+            android:text="Acerca de..."
+            android:textColor="@color/Negro"
+            android:textSize="@dimen/titulo" />
     </LinearLayout>
 
     <LinearLayout
