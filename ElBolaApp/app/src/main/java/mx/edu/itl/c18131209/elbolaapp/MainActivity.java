@@ -44,8 +44,6 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnTouchListener {
 
-    //----------------------------------------------------------------------------------------------
-
     private Button btnFiesta;
     private MediaPlayer mediaPlayer = null;
 

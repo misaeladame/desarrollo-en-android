@@ -31,8 +31,6 @@ import android.widget.VideoView;
 
 public class ConciertoActivity extends AppCompatActivity {
 
-    //----------------------------------------------------------------------------------------------
-
     private VideoView videoView;
 
     //----------------------------------------------------------------------------------------------

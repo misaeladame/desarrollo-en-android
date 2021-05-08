@@ -34,8 +34,6 @@ import android.widget.LinearLayout;
 
 public class LeerDatoActivity extends AppCompatActivity {
 
-    //----------------------------------------------------------------------------------------------
-
     ConstraintLayout layout;
     private EditText edtDato;
     private String llave;

@@ -34,8 +34,6 @@ import android.widget.LinearLayout;
 
 public class LoginActivity extends AppCompatActivity {
 
-    //----------------------------------------------------------------------------------------------
-
     LinearLayout layout;
 
     public static final int CODIGO_USUARIO = 10;

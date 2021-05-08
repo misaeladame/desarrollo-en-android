@@ -144,7 +144,7 @@
             android:backgroundTint="@color/Azul"
             android:onClick="btnEntrarClick"
             android:text="Entrar"
-            android:textColor="@color/Negro"
+            android:textColor="@color/Blanco"
             android:textSize="@dimen/titulo" />
 
         <Button
@@ -154,7 +154,7 @@
             android:backgroundTint="@color/Azul"
             android:onClick="btnAcercaDeClick"
             android:text="Acerca de..."
-            android:textColor="@color/Negro"
+            android:textColor="@color/Blanco"
             android:textSize="@dimen/titulo" />
     </LinearLayout>
 

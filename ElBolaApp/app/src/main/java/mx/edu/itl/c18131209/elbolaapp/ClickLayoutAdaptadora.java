@@ -31,8 +31,6 @@ import android.view.inputmethod.InputMethodManager;
 
 public class ClickLayoutAdaptadora implements View.OnClickListener {
 
-    //----------------------------------------------------------------------------------------------
-
     private Activity activity;
 
     //----------------------------------------------------------------------------------------------
