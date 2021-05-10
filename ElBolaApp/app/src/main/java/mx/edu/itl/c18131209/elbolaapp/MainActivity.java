@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
     private void reproducir_audio () {
         if ( mediaPlayer == null ) {
-            mediaPlayer = MediaPlayer.create ( this, R.raw.tropicalisimo );
+            mediaPlayer = MediaPlayer.create ( this, R.raw.la_muralla_verde );
         }
         mediaPlayer.start ();
     }

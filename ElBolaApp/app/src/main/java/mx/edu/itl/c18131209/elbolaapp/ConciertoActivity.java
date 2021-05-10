@@ -43,7 +43,7 @@ public class ConciertoActivity extends AppCompatActivity {
         // Configuremos el objeto VideoView para la reproducción del video
         videoView = findViewById ( R.id.videoView );
 
-        String uriPath = "android.resource://" + getPackageName () +"/" + R.raw.la_pachanga;
+        String uriPath = "android.resource://" + getPackageName () +"/" + R.raw.thunderstruck;
         Uri uri = Uri.parse ( uriPath );
         videoView.setVideoURI ( uri );
         videoView.setMediaController ( new MediaController( this ) );
