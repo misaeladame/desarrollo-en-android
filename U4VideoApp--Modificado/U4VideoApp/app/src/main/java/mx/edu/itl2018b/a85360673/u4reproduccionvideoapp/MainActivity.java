@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void btnDesdeAppClick ( View v ) {
         // Reproducir un video incluido en la app en la carpeta raw
-        ruta = "android.resource://" + this.getPackageName() + "/" + R.raw.la_pachanga;
+        ruta = "android.resource://" + this.getPackageName() + "/" + R.raw.thunderstruck;
         lanzarVideoActiviy ();
     }
 
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     public void btnDesdeAlmIntClick ( View v ) {
         // Reproducir un video en la carpeta DCIM del almacenamiento interno
         ruta = "file://" + Environment.getExternalStorageDirectory()
-                .getPath() + "/DCIM/la_pachanga.mp4";
+                .getPath() + "/DCIM/thunderstruck.mp4";
         lanzarVideoActiviy ();
     }
 
