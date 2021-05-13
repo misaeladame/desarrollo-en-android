@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/imgvLogo"
         android:layout_width="100dp"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <LinearLayout
