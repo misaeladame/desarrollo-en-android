@@ -44,11 +44,11 @@ public class SpinnerPersonalizadoActivity extends AppCompatActivity {
     private void inicializarClubes () {
         clubes = new ArrayList<> ( );
         // Agregar elementos al ArrayList
-        clubes.add ( new Club ( "Barcelona", R.drawable.club_barcelona ) );
-        clubes.add ( new Club ( "Bayern Munich", R.drawable.club_bayern ) );
-        clubes.add ( new Club ( "Chelsea", R.drawable.club_chelsea ) );
-        clubes.add ( new Club ( "Dinamo Kiev", R.drawable.club_dinamokiev ) );
-        clubes.add ( new Club ( "Dinamo Zagreb", R.drawable.club_zagreb ) );
+        clubes.add ( new Club ( "Dota 2", R.drawable.dota2 ) );
+        clubes.add ( new Club ( "League of Legends", R.drawable.lol ) );
+        clubes.add ( new Club ( "Half Life 2", R.drawable.half_life ) );
+        clubes.add ( new Club ( "Counter Strike", R.drawable.counter_strike ) );
+        clubes.add ( new Club ( "Left 4 Dead 2", R.drawable.l4d2 ) );
 
     }
 
@@ -57,7 +57,7 @@ public class SpinnerPersonalizadoActivity extends AppCompatActivity {
     public  void btnAceptarClick ( View v ) {
          // Recuperar el elemento seleccionado del Spinner y mostrar el nombre del club en un Toast
         Club club = (Club) spnClubes.getSelectedItem ();
-        Toast.makeText ( this, "Club seleccionado: " + club.getNombre (), Toast.LENGTH_SHORT ).show ();
+        Toast.makeText ( this, "Videojuego seleccionado: " + club.getNombre (), Toast.LENGTH_SHORT ).show ();
 
     }
 

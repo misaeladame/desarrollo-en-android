@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">U3SpinnerEjemploApp</string>
+
+    <string-array name="clubes_liga_mx">
+        <item>Mazda</item>
+        <item>SEAT</item>
+        <item>Audi</item>
+        <item>Bentley</item>
+        <item>BMV</item>
+        <item>Volkswagen</item>
+        <item>Ferrari</item>
+        <item>Ford</item>
+        <item>Volvo</item>
+    </string-array>
+</resources>

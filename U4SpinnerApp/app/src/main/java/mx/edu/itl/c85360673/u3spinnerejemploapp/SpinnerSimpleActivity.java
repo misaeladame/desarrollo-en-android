@@ -46,7 +46,7 @@ public class SpinnerSimpleActivity extends AppCompatActivity {
                 String s2 = ( (TextView) view ).getText ().toString ();
                 String s3 = clubes [ i ];
 
-                Toast.makeText ( SpinnerSimpleActivity.this, "Club seleccionado :" + s1,
+                Toast.makeText ( SpinnerSimpleActivity.this, "Auto seleccionado :" + s1,
                         Toast.LENGTH_SHORT ).show ();
             }
 
