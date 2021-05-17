@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:text="TECNOLOGICO NACIONAL DE MEXICO"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#3700B3"
                 android:textStyle="bold" />
 
             <TextView
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:text="Instituto Tecnologico de La Laguna"
                 android:textAlignment="center"
-                android:textColor="@color/colorAccent"
+                android:textColor="#3700B3"
                 android:textStyle="bold" />
 
             <TextView
@@ -110,7 +110,7 @@
             android:layout_weight="1"
             android:text="SpinnerApp"
             android:textAlignment="center"
-            android:textColor="@color/colorAccent"
+            android:textColor="#3700B3"
             android:textSize="30sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -149,7 +149,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#FFFFFF"
-            android:text="Torreon, Coah. a 10 de Mayo de 2021"
+            android:text="Torreon, Coah. a 14 de Mayo de 2021"
             android:textAlignment="center"
             android:textColor="#636363"
             android:textSize="10sp" />

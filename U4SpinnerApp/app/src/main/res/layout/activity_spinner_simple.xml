@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/spnClubesLigaMx"
+        android:id="@+id/spnMarcasDeAutos"
         android:layout_width="194dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">U3SpinnerEjemploApp</string>
 
-    <string-array name="clubes_liga_mx">
+    <string-array name="marcas_de_autos">
         <item>Mazda</item>
         <item>SEAT</item>
         <item>Audi</item>

@@ -14,13 +14,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import mx.edu.itl.c85360673.u3spinnerejemploapp.R;
 
-public class SpinnerClubesAdapter extends ArrayAdapter<Club> {
+public class SpinnerVideojuegosAdapter extends ArrayAdapter<Videojuego> {
 
     //----------------------------------------------------------------------------------------------
     // Constructor
 
-    public SpinnerClubesAdapter ( @NonNull Context context, ArrayList<Club> clubes ) {
-        super ( context, 0, clubes );
+    public SpinnerVideojuegosAdapter(@NonNull Context context, ArrayList<Videojuego> Videojuegos ) {
+        super ( context, 0, Videojuegos );
     }
 
     @NonNull
@@ -45,13 +45,13 @@ public class SpinnerClubesAdapter extends ArrayAdapter<Club> {
                     .inflate ( R.layout.spinner_fila_imagen_texto, parent, false );
         }
 
-        ImageView escudo = convertView.findViewById ( R.id.imgvEscudo );
+        ImageView logo = convertView.findViewById ( R.id.imgvLogo);
         TextView nombre = convertView.findViewById ( R.id.txtvNombre );
 
-        Club club = getItem ( position );
+        Videojuego videojuego = getItem ( position );
 
-        escudo.setImageResource ( club.getEscudoID () );
-        nombre.setText ( club.getNombre () );
+        logo.setImageResource ( videojuego.getLogoID() );
+        nombre.setText ( videojuego.getNombre () );
 
         return convertView;
     }
