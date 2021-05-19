@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Personalizar" >
+        <menu >
+            <group android:checkableBehavior="all">
+                <item
+                    android:id="@+id/mniTamano8"
+                    android:checked="true"
+                    android:title="Tamano 8" />
+                <item
+                    android:id="@+id/mniTamano12"
+                    android:title="Tamano 12" />
+                <item
+                    android:id="@+id/mniTamano20"
+                    android:title="Tamano 20" />
+            </group>
+            <item
+                android:id="@+id/mniCambiarColorLetra"
+                android:title="Color de letra" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/mniColorFondoPrincipal"
+        android:onClick="mniColorFondoPrincipalClick"
+        android:title="Cambiar color de fondo"
+        app:actionLayout="@layout/switch_item" />
+    <item
+        android:id="@+id/mniAcercaDe"
+        android:icon="@android:drawable/ic_menu_help"
+        android:onClick="menuAcercaDeClick"
+        android:title="Acerca de.."
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mniSalir"
+        android:icon="@android:drawable/btn_dialog"
+        android:title="Salir"
+        app:showAsAction="ifRoom" />
+</menu>
