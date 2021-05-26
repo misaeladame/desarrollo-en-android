@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4DEA9"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:gravity="center_horizontal"
+        android:text="Capturar Fotos"
+        android:textColor="#017638"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CAPTURA SIMPLE inicia la aplicacion de la camara y la foto adquirida se guarda en la carpeta DCIM Se guarda en un archivo con nombre fotoYYYYMMDDHHmmSS.jpg basado en la fecha del sistema."
+        android:textColor="#390F6F" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F7EEEE"
+        android:onClick="btnCapturaSimpleClick"
+        android:text="Tomar foto" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="CAPTURA CON OPCIONES, ofrece botones para tomar la foto y da opciones para guardarla en almacenamiento interno privado o en compartido. Tambien dá opciones sobre la calidad con la que se debe guardar la foto."
+        android:textColor="#390F6F" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F7EEEE"
+        android:onClick="btnCapturaOpcionesClick"
+        android:text="Captura con opciones para guardar >>" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#F7EEEE"
+        android:onClick="btnAcercaDeClick"
+        android:text="Acerca De..." />
+
+</LinearLayout>
