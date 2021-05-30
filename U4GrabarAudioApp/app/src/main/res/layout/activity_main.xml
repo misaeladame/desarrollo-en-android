@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4DEA9"
     android:orientation="vertical"
     android:padding="20dp"
     tools:context=".MainActivity">
@@ -26,7 +27,8 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar grabación como:" />
+        android:text="Guardar grabación como:"
+        android:textColor="#686868" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -60,7 +62,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="mensajes..."
-        android:textColor="@color/colorPrimary"
+        android:textColor="#390F6F"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -68,6 +70,8 @@
         android:id="@+id/btnGrabar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#F7EEEE"
         android:onClick="btnGrabarClick"
         android:text="Grabar" />
 
@@ -75,6 +79,9 @@
         android:id="@+id/btnDetener"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#F7EEEE"
         android:onClick="btnDetenerClick"
         android:text="Detener" />
 
@@ -82,7 +89,17 @@
         android:id="@+id/btnReproducir"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="#F7EEEE"
         android:onClick="btnReproducirClick"
         android:text="Reproducir" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F7EEEE"
+        android:onClick="btnAcercaDeClick"
+        android:text="Acerca De..." />
 
 </LinearLayout>
