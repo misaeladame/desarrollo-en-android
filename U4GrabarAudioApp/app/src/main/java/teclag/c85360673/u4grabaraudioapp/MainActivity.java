@@ -1,3 +1,31 @@
+/*------------------------------------------------------------------------------------------
+:*                         TECNOLOGICO NACIONAL DE MEXICO
+:*                       INSTITUTO TECNOLOGICO DE LA LAGUNA
+:*                     INGENIERIA EN SISTEMAS COMPUTACIONALES
+:*                             DESARROLLO EN ANDROID "A"
+:*
+:*                   SEMESTRE: ENE-JUN/2021    HORA: 10-11 HRS
+:*
+:*                          Clase principal de la app
+:*
+:*  Archivo     : MainActivity.java
+:*  Autor       : Jose Misael Adame Sandoval     18131209
+:*  Fecha       : 29/May/2021
+:*  Compilador  : Android Studio 4.1.2
+:*  Descripción : Clase que permite grabar, almacenar y reproducir audios en formato 3gp,
+:*                los botones que tiene son los siguientes:
+:*
+:*                •	Grabar
+:*                •	Detener
+:*                •	Reproducir
+:*                •	Acerca de...
+:*
+:*  Ultima modif:
+:*  Fecha       Modificó             Motivo
+:*==========================================================================================
+:*
+:*------------------------------------------------------------------------------------------*/
+
 package teclag.c85360673.u4grabaraudioapp;
 
 import androidx.annotation.NonNull;
@@ -5,6 +33,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
@@ -38,8 +68,9 @@ public class MainActivity extends AppCompatActivity {
 
     private MediaRecorder mediaRecorder;
     private MediaPlayer mediaPlayer;
-    private String ruta = Environment.getExternalStorageDirectory ().getAbsolutePath () +
-                          File.separator;
+    private final String ruta = Environment.getExternalStorageDirectory ().getAbsolutePath () +
+                                File.separator;
+    private ContextWrapper cw;
     private String fichero;
 
     @Override
@@ -59,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
         btnGrabar.setEnabled ( true );
         btnDetener.setEnabled ( false );
         btnReproducir.setEnabled ( false );
+
     }
 
     @Override
@@ -68,8 +100,11 @@ public class MainActivity extends AppCompatActivity {
             ChecadorDePermisos.verificarPermisosSolicitados ( this, permisosReq, permissions, grantResults );
     }
 
-    public void btnGrabarClick (View v ) {
+    public void btnGrabarClick (View v ) throws IOException {
+        //cw = new ContextWrapper(getApplicationContext());
         fichero = ruta + edtGuardarComo.getText().toString() + ".3gp";
+        //File directorio = cw.getExternalFilesDir ( Environment.DIRECTORY_MUSIC );
+        //fichero = String.valueOf ( new File ( directorio, edtGuardarComo.getText().toString() + ".3gp") );
 
         mediaRecorder = new MediaRecorder();
         // Establecer el MICROFONO como fuente de audio
