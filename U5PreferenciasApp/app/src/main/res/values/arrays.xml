@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="leyendasTipoGrafico">
+        <item>Alta resolucion UHD</item>
+        <item>Media resolucion TV</item>
+        <item>Baja resolucion VGA</item>
+    </string-array>
+
+    <string-array name="valoresTipoGrafico">
+        <item>100</item>
+        <item>50</item>
+        <item>10</item>
+    </string-array>
+
+</resources>
