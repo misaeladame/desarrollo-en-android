@@ -5,22 +5,33 @@
 
         <CheckBoxPreference
             android:defaultValue="false"
-            android:key="check_box_preference_1"
-            android:title="Check box preference" />
+            android:key="reproducir_musica"
+            android:summary="Establece si la app podra reproducir audios"
+            android:title="Reproducir musica" />
         <ListPreference
-            android:defaultValue="1"
+            android:defaultValue="100"
             android:entries="@array/leyendasTipoGrafico"
             android:entryValues="@array/valoresTipoGrafico"
-            android:key="list_preference_1"
-            android:title="List preference" />
+            android:key="tipo_de_graficos"
+            android:summary="Establece la resolucion de los graficos"
+            android:title="Tipo de graficos" />
         <EditTextPreference
-            android:defaultValue="Default value"
-            android:key="edit_text_preference_1"
+            android:defaultValue="3"
+            android:key="numero_de_fragmentos"
             android:selectAllOnFocus="true"
             android:singleLine="true"
-            android:title="Edit text preference" />
+            android:summary="Piezas en que se fragmenta un asteroide"
+            android:title="Numero de fragmentos" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Avanzadas">
 
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="activar_modo_multiple"
+            android:title="Activar modo multiple" />
+        <RingtonePreference
+            android:defaultValue=""
+            android:key="tono_de_alarma"
+            android:title="Tono de alarma" />
     </PreferenceCategory>
 </PreferenceScreen>
