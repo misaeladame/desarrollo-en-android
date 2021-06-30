@@ -1,0 +1,126 @@
+@startuml
+class mx.edu.itl.equipo9.proyfinalasistenciasapp.activities.SplashActivity {
+# void onCreate(Bundle)
+}
+class mx.edu.itl.equipo9.proyfinalasistenciasapp.activities.MainActivity {
+- PermisoApp[] permisosReq
+# void onCreate(Bundle)
++ void onRequestPermissionsResult(int,String[],int[])
++ void btnAcercaDeClick(View)
++ void btnAlumnosClick(View)
++ void btnMateriasClick(View)
++ void btnAsistenciasClick(View)
+}
+class mx.edu.itl.equipo9.proyfinalasistenciasapp.activities.MateriasActivity {
+~ TableLayout tlMaterias
+~ Button cargarMaterias
+# void onCreate(Bundle)
++ void getListaMaterias(String)
++ void btnCargarMateriasClick(View)
++ void btnLeerClick()
++ boolean isAlmExtLeible()
+# void onActivityResult(int,int,Intent)
++ void llenarTabla()
+}
+class mx.edu.itl.equipo9.proyfinalasistenciasapp.modelos.Alumno {
+- String numeroDeControl
+- String nombreCompleto
++ <<Create>> Alumno(String,String)
++ String getNumeroDeControl()
++ void setNumeroDeControl(String)
++ String getNombreCompleto()
++ void setNombreCompleto(String)
+}
+class mx.edu.itl.equipo9.proyfinalasistenciasapp.modelos.Materia {
+- String clave
+- String nombre
++ <<Create>> Materia(String,String)
++ String getClave()
++ void setClave(String)
++ String getNombre()
++ void setNombre(String)
+}
+class mx.edu.itl.equipo9.proyfinalasistenciasapp.activities.AsistenciasActivity {
+~ ListView listViewAsistencias
+~ ArrayList<String> listaInformacion
+~ ArrayList<Asistencias> listaAsistencias
+~ ConexionSQLite conn
+~ TableLayout tlFechaAlumno
+~ TextView tvNombreAlumnoFecha
+# void onCreate(Bundle)
+- void obtenerLista()
++ void getListaAsistencias(Uri,String)
++ void btnCargarAsistenciasClick(View)
+# void onActivityResult(int,int,Intent)
++ void consultarListaAsistencias()
+}
+class mx.edu.itl.equipo9.proyfinalasistenciasapp.activities.AlumnosActivity {
+~ TableLayout tlAlumnos
+~ Button cargarAlumnos
+# void onCreate(Bundle)
++ void getListaAlumnos(String)
++ void btnCargarAlumnosClick(View)
++ void btnLeerClick()
++ boolean isAlmExtLeible()
+# void onActivityResult(int,int,Intent)
++ void llenarTabla()
+}
+class mx.edu.itl.equipo9.proyfinalasistenciasapp.activities.DetalleFechaAlumnoActivity {
+# void onCreate(Bundle)
+}
+class mx.edu.itl.equipo9.proyfinalasistenciasapp.modelos.Modelo {
++ SQLiteDatabase getConn(Context)
++ int insertaAlumno(Context,Alumno)
++ int insertaMateria(Context,Materia)
+}
+class mx.edu.itl.equipo9.proyfinalasistenciasapp.activities.AcercaDeActivity {
+# void onCreate(Bundle)
+}
+class mx.edu.itl.equipo9.proyfinalasistenciasapp.bd.ConexionSQLite {
+~ String TABLA_ALUMNO
+~ String TABLA_MATERIA
+~ String TABLA_ASISTENCIAS
+~ String ELIMINAR_TABLA_ALUMNOS
+~ String ELIMINAR_TABLA_MATERIA
++ <<Create>> ConexionSQLite(Context,String,SQLiteDatabase.CursorFactory,int)
++ void onCreate(SQLiteDatabase)
++ void onUpgrade(SQLiteDatabase,int,int)
+}
+class mx.edu.itl.equipo9.proyfinalasistenciasapp.modelos.Asistencias {
+- int id
+- String numeroDeControl
+- String alumno
+- String materia
+- int presente
+- int justificado
+- int total
+- String porcentaje
++ <<Create>> Asistencias()
++ int getId()
++ void setId(int)
++ String getNumeroDeControl()
++ void setNumeroDeControl(String)
++ String getAlumno()
++ void setAlumno(String)
++ String getMateria()
++ void setMateria(String)
++ int getPresente()
++ void setPresente(int)
++ int getJustificado()
++ void setJustificado(int)
++ int getTotal()
++ void setTotal(int)
++ String getPorcentaje()
++ void setPorcentaje(String,int)
+}
+
+
+androidx.appcompat.app.AppCompatActivity <|-- mx.edu.itl.equipo9.proyfinalasistenciasapp.activities.SplashActivity
+androidx.appcompat.app.AppCompatActivity <|-- mx.edu.itl.equipo9.proyfinalasistenciasapp.activities.MainActivity
+androidx.appcompat.app.AppCompatActivity <|-- mx.edu.itl.equipo9.proyfinalasistenciasapp.activities.MateriasActivity
+androidx.appcompat.app.AppCompatActivity <|-- mx.edu.itl.equipo9.proyfinalasistenciasapp.activities.AsistenciasActivity
+androidx.appcompat.app.AppCompatActivity <|-- mx.edu.itl.equipo9.proyfinalasistenciasapp.activities.AlumnosActivity
+androidx.appcompat.app.AppCompatActivity <|-- mx.edu.itl.equipo9.proyfinalasistenciasapp.activities.DetalleFechaAlumnoActivity
+androidx.appcompat.app.AppCompatActivity <|-- mx.edu.itl.equipo9.proyfinalasistenciasapp.activities.AcercaDeActivity
+android.database.sqlite.SQLiteOpenHelper <|-- mx.edu.itl.equipo9.proyfinalasistenciasapp.bd.ConexionSQLite
+@enduml
